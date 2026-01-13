@@ -1,4 +1,5 @@
 from flask import Flask
+from db import get_conn
 from routes import bp
 
 def create_app():
@@ -7,6 +8,8 @@ def create_app():
     return app
 
 app = create_app()
+
+myconnection=get_conn()
 
 
 if __name__ == "__main__":
