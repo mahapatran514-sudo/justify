@@ -1,1 +1,5 @@
-to install cors run command pip install flask cors
+### Command to deactivate venv
+```shell
+deactivate
+```
+
