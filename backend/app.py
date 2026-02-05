@@ -11,12 +11,8 @@ def create_app():
     app = Flask(__name__)
     CORS(app)
 
-    try:
-        db_check()
-        ensure_schema()
-    except Exception as e:
-        print("⚠️  Warning: DB not available at startup; continuing without DB.\n",
-              f"Error: {e}")
+    db_check()
+    ensure_schema()
 
     app.register_blueprint(health_bp)
     app.register_blueprint(predict_bp)
